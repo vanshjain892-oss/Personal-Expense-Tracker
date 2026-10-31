@@ -1,0 +1,26 @@
+
+# Frontend
+node_modules/
+dist/
+
+# Backend
+build/
+.gradle/
+out/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+application-local.properties
+**/serviceAccount*.json
+*.pem
+*.key
+
+# IDE files
+.idea/
+.vscode/
+
+# Operating system
+.DS_Store
+Thumbs.db

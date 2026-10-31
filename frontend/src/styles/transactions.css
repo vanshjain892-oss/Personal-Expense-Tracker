@@ -1,0 +1,155 @@
+/* ===== Transactions Page Styles ===== */
+
+/* Filter bar at the top */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Inter', Arial, sans-serif;
+  color: var(--text);
+  background: white;
+  outline: none;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+  border-color: var(--primary);
+}
+
+.filter-bar input[type="text"] {
+  min-width: 200px;
+}
+
+/* Transaction table */
+.transaction-table-wrapper {
+  overflow-x: auto;
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.transaction-table th {
+  background-color: var(--bg);
+  padding: 11px 14px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.transaction-table td {
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.transaction-table tr:last-child td {
+  border-bottom: none;
+}
+
+.transaction-table tr:hover td {
+  background-color: #f8fafc;
+}
+
+/* Income/expense amount colors */
+.amount-income {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.amount-expense {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+/* Type badge */
+.type-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-income {
+  background-color: #dcfce7;
+  color: var(--success);
+}
+
+.badge-expense {
+  background-color: #fee2e2;
+  color: var(--danger);
+}
+
+/* Action buttons in table */
+.table-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-edit {
+  padding: 4px 10px;
+  font-size: 12px;
+  background-color: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  transition: background-color 0.15s;
+}
+
+.btn-edit:hover {
+  background-color: #EFF6FF;
+}
+
+.btn-delete {
+  padding: 4px 10px;
+  font-size: 12px;
+  background-color: white;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  transition: background-color 0.15s;
+}
+
+.btn-delete:hover {
+  background-color: #fee2e2;
+}
+
+@media (max-width: 768px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-bar input[type="text"] {
+    min-width: unset;
+  }
+}
